@@ -27,5 +27,10 @@ export const styles = StyleSheet.create({
         flex: 1, 
         justifyContent: "center", 
         alignItems: "center"
+    },
+    buttonArea: {
+        height: 400,
+        flexDirection: "column", 
+        justifyContent: "space-between"
     }
 })

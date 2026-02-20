@@ -7,7 +7,7 @@ export default function login() {
     const router = useRouter();
   return (
     <View style={styles.logincontainer}>
-      <View style={{ height: 400, flexDirection: "column", justifyContent: "space-between"}}>
+      <View style={styles.buttonArea}>
         <TouchableOpacity style={{ width: 200, height: 50, backgroundColor: "gray" }} onPress={() => router.push("/(auth)/signin")}>
             <Text>Sign In</Text>
         </TouchableOpacity>
