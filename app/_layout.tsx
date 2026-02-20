@@ -1,5 +1,3 @@
-// app/_layout.tsx
-
 import { AuthProvider } from "@/context/AuthContext";
 
 import { User } from "@supabase/supabase-js";
@@ -54,5 +52,5 @@ export default function Layout() {
       </SafeAreaProvider>
     </AuthProvider>
   );
-}
+  }
 

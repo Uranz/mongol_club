@@ -22,5 +22,15 @@ export const styles = StyleSheet.create({
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+    },
+    logincontainer: {
+        flex: 1, 
+        justifyContent: "center", 
+        alignItems: "center"
+    },
+    buttonArea: {
+        height: 400,
+        flexDirection: "column", 
+        justifyContent: "space-between"
     }
 })

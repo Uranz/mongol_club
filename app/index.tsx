@@ -17,3 +17,4 @@ export default function Index() {
 
   return null; // nothing renders — just redirect
 }
+
