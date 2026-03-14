@@ -3,7 +3,7 @@ import { styles } from '@/styles/login.styles';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
-import { Alert, Keyboard, Pressable, TextInput, TouchableOpacity, View } from 'react-native';
+import { Alert, Keyboard, Pressable, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function signin() {
     const router = useRouter();
@@ -19,7 +19,7 @@ export default function signin() {
           });
       
           if (error) {
-            Alert.alert("Login failed", error.message);
+            Alert.alert("Login failed", "missing email or password");
             return;
           }
       
@@ -41,9 +41,15 @@ export default function signin() {
          <Ionicons name='arrow-back' color={"black"} size={30}/>
        </TouchableOpacity>
 
+       <TouchableOpacity onPress={() => router.push("/(auth)/forgotPasswordScreen")}>
+        <Text>
+          Forgot Password?
+        </Text>
+       </TouchableOpacity>
+
        <View>
-         <TextInput value={email} placeholder='Email' onChangeText={setEmail} secureTextEntry={false} autoCapitalize='none' style={styles.inputs}/>
-         <TextInput value={password} placeholder='Password' onChangeText={setPassword} secureTextEntry autoCapitalize='none' style={styles.inputs}/>
+         <TextInput value={email} placeholder='Email' placeholderTextColor={"black"} onChangeText={setEmail} secureTextEntry={false} autoCapitalize='none' style={styles.inputs}/>
+         <TextInput value={password} placeholder='Password' placeholderTextColor={"black"} onChangeText={setPassword} secureTextEntry autoCapitalize='none' style={styles.inputs}/>
        </View>
 
        <View>
